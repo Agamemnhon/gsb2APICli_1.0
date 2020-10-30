@@ -1,0 +1,19 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Code Praticien</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Consulter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let praticien of praticiens">
+      <td>{{ praticien.code_praticien }}</td>
+      <td>{{ praticien.nom_praticien }}</td>
+      <td>{{ praticien.prenom_praticien }}</td>
+      <td><button class="btn btn-primary" (click)="detail(praticien.id_praticien)">Consulter</button>
+    </tr>
+  </tbody>
+</table>
+

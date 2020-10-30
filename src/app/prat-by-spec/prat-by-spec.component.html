@@ -1,0 +1,11 @@
+<div class="well">
+  <div class="text-center titre">
+    <h2>{{title}}</h2>
+  </div>
+  <form class="form-horizontal" role="form" name="pratBySpec">
+    <div class="form-group">
+      <app-specialite [id_specialite]="id_specialite" (onChoose)="specSelected($event)"></app-specialite>
+    </div>
+    <app-error [error]="error"></app-error>
+  </form>
+</div>

@@ -1,0 +1,7 @@
+<label class="col-sm-3 col-md-2 control-label">Spécialité : </label>
+<div class="col-sm-5 col-md-5">
+  <select class='form-control' name='spec' [(ngModel)]="id_specialite" (change)="onChange($event.target.value)">
+    <option value='undefined' selected>Sélectionner une spécialité</option>
+    <option *ngFor="let specialite of specialites" [value]="specialite.id_specialite">{{ specialite.lib_specialite}} </option>
+  </select>
+</div>

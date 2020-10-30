@@ -1,0 +1,10 @@
+<div class="container">
+  <form class="form-horizontal" role="form" name="pratBySpec">
+    <div class="form-group">
+      <app-praticien [nom_praticien]="nom_praticien" (onValidate)="nameValidate($event)"></app-praticien>
+      <app-error [error]="error"></app-error>
+    </div>
+  </form>
+</div>
+
+

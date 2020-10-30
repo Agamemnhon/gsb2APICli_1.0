@@ -1,0 +1,30 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Code Praticien</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Specialite</th>
+      <th>Diplome</th>
+      <th>Coef. Prescription</th>
+      <th>Modifier</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pratPossSpec of pratPossSpecs">
+      <td>{{ pratPossSpec.praticien.code_praticien }}</td>
+      <td>{{ pratPossSpec.praticien.nom_praticien}}</td>
+      <td>{{ pratPossSpec.praticien.prenom_praticien }}</td>
+      <td>{{ pratPossSpec.specialite.lib_specialite }}</td>
+      <td>{{ pratPossSpec.diplome }}</td>
+      <td>{{ pratPossSpec.coef_prescription }}</td>
+      <td><button class="btn btn-primary" (click)="detail(pratPossSpec.id_praticien, pratPossSpec.id_specialite)">Modifier</button></td>
+      <td><button class="btn btn-primary" (click)="delete(pratPossSpec.id_praticien, pratPossSpec.id_specialite)">Supprimer</button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="container">
+  <button class="btn btn-primary" (click)="addPosseder(id_praticien, 0)">Ajouter</button>
+</div>
+
